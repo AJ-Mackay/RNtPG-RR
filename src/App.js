@@ -15,10 +15,15 @@ const App = () => {
   // return <h1 title="This works!">Hi, this is ReactJS!</h1>;
   // return React.createElement('h1', {title: 'This works!'}, 'Hi, this is ReactJS!');
   
+  const addNewGoalHandler = (newGoal) => {
+    courseGoals.push(newGoal);
+    console.log(courseGoals);
+  };
+
   return (
     <div className="course-goals">
       <h2>Course Goals</h2>
-      <NewGoal />
+      <NewGoal onAddGoal={addNewGoalHandler} />
       <GoalList goals={courseGoals} />
     </div>
   );
