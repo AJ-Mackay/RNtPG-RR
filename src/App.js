@@ -16,7 +16,13 @@ const App = () => {
   // return React.createElement('h1', {title: 'This works!'}, 'Hi, this is ReactJS!');
   
   const addNewGoalHandler = (newGoal) => {
-    setCourseGoals(courseGoals.concat(newGoal));
+    // setCourseGoals(courseGoals.concat(newGoal));
+    setCourseGoals((prevCourseGoals) => {
+      return prevCourseGoals.concat(newGoal);
+    });
+    // can also be shortened to:
+    // setCourseGoals((prevCourseGoals => prevCourseGoals.concat(newGoal)));
+    // as only one item is being returned.
   };
 
   return (
