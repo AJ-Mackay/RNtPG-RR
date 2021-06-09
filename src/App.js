@@ -6,4 +6,11 @@ const App = () => {
   // return React.createElement('h1', {title: 'This works!'}, 'Hi, this is ReactJS!');
 };
 
+// Old React would be written as:
+// class App extends React.Component {
+//   render() {
+//     return <h1 title="This works!">Hi, this is ReactJS!</h1>;
+//   }
+// }
+
 export default App;
